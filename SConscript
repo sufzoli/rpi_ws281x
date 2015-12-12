@@ -31,6 +31,7 @@ Import(['clean_envs'])
 
 tools_env = clean_envs['userspace'].Clone()
 
+tools_env.Append(CCFLAGS = "-fPIC")
 
 # Build Library
 lib_srcs = Split('''
